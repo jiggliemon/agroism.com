@@ -1226,23 +1226,19 @@ table {
           outline: 0; }
   @media screen and (max-width: 736px) {
     #header {
-      height: 2.5em;
-      line-height: 2.5em; }
+      height: 2.7em;
+      line-height: 2.7em; }
       #header h1 {
         text-align: center;
         position: relative;
         left: 0;
-        top: 0;
-        height: 2.5em;
-        line-height: 2.5em; }
+        top: -1em;
+        height: 2.7em;
+        line-height: 2.7em; }
         #header h1 a {
           font-size: 1em; }
       #header nav {
         display: none; } }
-
-@media screen and (max-width: 736px) {
-  body {
-    padding-top: 2.5em; } }
 
 /* Main */
 .main {

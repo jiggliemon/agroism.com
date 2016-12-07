@@ -64,16 +64,16 @@
 		}
 
 		@include breakpoint(small) {
-			height: 2.5em;
-			line-height: 2.5em;
+			height: 2.7em;
+			line-height: 2.7em;
 
 			h1 {
 				text-align: center;
 				position: relative;
 				left: 0;
-				top: 0;
-				height: 2.5em;
-				line-height: 2.5em;
+				top: -1em;
+				height: 2.7em;
+				line-height: 2.7em;
 
 				a {
 					font-size: 1em;
@@ -89,6 +89,6 @@
 	body {
 
 		@include breakpoint(small) {
-			padding-top: 2.5em;
+			//padding-top: 2.5em;
 		}
 	}

@@ -50,7 +50,7 @@ html {
   height: 100%; }
 
 body {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   height: 100%;
   min-width: 320px; }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -412,7 +412,7 @@ p, ul, ol, dl, table {
 
 /* Box */
 .box {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   color: #39454b;
   padding: 2em; }
   .box > :last-child {
@@ -424,7 +424,7 @@ p, ul, ol, dl, table {
       padding: 1em; }
       .box.style2 {
         padding: 1.5em 1.25em 1.5em 1.25em;
-        background-color: rgba(255, 255, 255, 0.1); } }
+        background-color: rgba(255, 255, 255, 0); } }
 
 /* Button */
 input[type="button"],
@@ -738,7 +738,7 @@ table {
       padding: 0.5em 1em 0.5em 1em; }
     table.default thead {
       background: #39454b;
-      color: rgba(255, 255, 255, 0.2); }
+      color: rgba(255, 255, 255, 0.1); }
     table.default tfoot {
       background: #e5e6e7; }
 
@@ -786,7 +786,7 @@ table {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     width: 100%;
     height: 3em;
     line-height: 2.8em;
@@ -863,7 +863,7 @@ table {
       border-radius: 100%;
       box-shadow: inset 0 0 0 2px #fff;
       background: url("images/poptrox-closer.svg") center center;
-      color: rgba(255, 255, 255, 0.2) !important; }
+      color: rgba(255, 255, 255, 0.1) !important; }
   .poptrox-popup:hover .closer {
     opacity: 0.5; }
     .poptrox-popup:hover .closer:hover {
@@ -1186,30 +1186,30 @@ table {
   position: fixed;
   z-index: 10000;
   left: 0;
-  top: 0;
+  top: 1em;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  height: 4em;
-  line-height: 4em;
+  background: rgba(255, 255, 255, 0.05);
+  height: 2.7em;
+  line-height: 2.7em;
   box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1); }
   #header h1 {
     position: absolute;
     left: 1em;
-    top: 0;
-    height: 4em;
-    line-height: 4em;
+    top: -1em;
+    height: 2.7em;
+    line-height: 2.7em;
     cursor: default; }
     #header h1 a {
       font-size: 1.25em; }
     #header h1 img {
-      max-height: 135%;
+      max-height: 190%;
       display: inline-block; }
   #header nav {
     position: absolute;
     right: 0.5em;
     top: 0;
-    height: 4em;
-    line-height: 4em; }
+    height: 2.7em;
+    line-height: 2.7em; }
     #header nav ul {
       margin: 0; }
       #header nav ul li {
@@ -1220,8 +1220,8 @@ table {
           display: block;
           color: inherit;
           text-decoration: none;
-          height: 4em;
-          line-height: 4em;
+          height: 2.7em;
+          line-height: 2.7em;
           padding: 0 0.5em 0 0.5em;
           outline: 0; }
   @media screen and (max-width: 736px) {
@@ -1337,7 +1337,7 @@ table {
     .main.style3 .content > header {
       margin-bottom: 2em; }
     .main.style3.primary {
-      background: rgba(255, 255, 255, 0.2); }
+      background: rgba(255, 255, 255, 0.1); }
     .main.style3.secondary {
       background: #f5f6f7; }
   .main.dark {

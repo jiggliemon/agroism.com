@@ -59,16 +59,12 @@
 						IEResizeTimeout = setTimeout(function() {
 
 							var wh = $window.height();
-
 							$main.each(function() {
-
 								var $this = $(this);
-
 								$this.css('height', '');
-
-								if ($this.height() <= wh)
+								if ($this.height() <= wh) {
 									$this.css('height', (wh - 50) + 'px');
-
+								}
 							});
 
 						});
@@ -215,7 +211,7 @@
 
 						// Update scrolly links.
 							$('a[href^="#"]').scrolly({
-								speed: 1500,
+								speed: 300,
 								//offset: $header.outerHeight() - 1
 							});
 

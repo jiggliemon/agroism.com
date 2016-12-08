@@ -52,54 +52,66 @@
 	@import 'layout/footer';
 
 /* Intro */
+#intro {
+	
+	background: url('../../images/DSC04143.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 
-	#intro {
-		background: url('../../images/DSC04143.jpg');
+	@include breakpoint(medium) {
+		background: url('../../images/DSC04143-small.jpg');
 		background-size: cover;
 		background-attachment: fixed;
-		background-position: bottom center;
-		background-repeat: no-repeat;
+		background-position: center center;
 	}
+}
 
 /* One */
+#one {
+	
+	background: url('../../images/xp1000-4.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
 
-	#one {
-		background: url('images/overlay.png'), url('../../images/one.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+	@include breakpoint(medium) {
+		background: url('../../images/xp1000-4-small.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
 	}
+}
 
 /* Two */
-
-	#two {
-		background: url('images/overlay.png'), url('../../images/two.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#two {
+	background: url('../../images/two.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
 
 /* Contact */
+#contact {
+	overflow: hidden;
+	padding-bottom: 0;
 
-	#contact {
-		overflow: hidden;
-		padding-bottom: 0;
+	.box {
+		@include vendor('transition', 'transform #{_duration(fade-in)} ease');
+		@include vendor('transform', 'translateY(0)');
+		position: relative;
+	}
 
+	&.inactive {
 		.box {
-			@include vendor('transition', 'transform #{_duration(fade-in)} ease');
-			@include vendor('transform', 'translateY(0)');
-			position: relative;
-		}
-
-		&.inactive {
-			.box {
-				@include vendor('transform', 'translateY(100%)');
-			}
-		}
-
-		@include breakpoint(small) {
-			.box {
-				padding-bottom: 2em;
-			}
+			@include vendor('transform', 'translateY(100%)');
 		}
 	}
+
+	@include breakpoint(small) {
+		.box {
+			padding-bottom: 2em;
+		}
+	}
+}

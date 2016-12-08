@@ -1459,20 +1459,32 @@ table {
   background-attachment: fixed;
   background-position: bottom center;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1000px) {
+    #intro {
+      background: url("../../images/DSC04143-small.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center; } }
 
 /* One */
 #one {
-  background: url("images/overlay.png"), url("../../images/one.jpg");
-  background-size: 256px 256px, cover;
-  background-attachment: fixed, fixed;
-  background-position: top left, center center; }
+  background: url("../../images/xp1000-4.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
+  @media screen and (max-width: 1000px) {
+    #one {
+      background: url("../../images/xp1000-4-small.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center; } }
 
 /* Two */
 #two {
-  background: url("images/overlay.png"), url("../../images/two.jpg");
-  background-size: 256px 256px, cover;
-  background-attachment: fixed, fixed;
-  background-position: top left, center center; }
+  background: url("../../images/two.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center; }
 
 /* Contact */
 #contact {

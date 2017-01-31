@@ -5,7 +5,9 @@
 ///
 
 /* Type */
-
+	body {
+		font-family: font-family: 'Roboto Slab', 'Roboto', 'Open Sans', serif;
+	}
 	body, input, textarea, select {
 		font-family: _font(family);
 		font-weight: _font(weight);

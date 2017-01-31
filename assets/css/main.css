@@ -334,11 +334,8 @@ body {
   body:before {
     line-height: 2.025em; } }
 /* Type */
-body {
-  font-family: 'Roboto Slab', 'Roboto', 'Open Sans', serif; }
-
 body, input, textarea, select {
-  font-family: "Source Sans Pro", "sans-serif";
+  font-family: "Roboto Slab", "Roboto", "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 18pt;
   line-height: 1.75em;
@@ -362,7 +359,7 @@ body, input, textarea, select {
       line-height: 1.5em; } }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
+  font-weight: 700;
   color: inherit;
   letter-spacing: -0.0325em; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -378,7 +375,7 @@ h2 {
   h2 {
     font-size: 1.5em; } }
 strong, b {
-  font-weight: 900;
+  font-weight: 700;
   color: inherit; }
 
 em, i {

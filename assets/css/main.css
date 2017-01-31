@@ -413,7 +413,7 @@ p, ul, ol, dl, table {
 /* Box */
 .box {
   background: rgba(255, 255, 255, 0.1);
-  color: #39454b;
+  color: #fff;
   padding: 2em; }
   .box > :last-child {
     margin-bottom: 0; }

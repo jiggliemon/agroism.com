@@ -1468,13 +1468,13 @@ table {
 
 /* One */
 #one {
-  background: url("../../images/xp1000-4.jpg");
+  background: url("../../images/rebock.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center; }
   @media screen and (max-width: 1000px) {
     #one {
-      background: url("../../images/xp1000-4-small.jpg");
+      background: url("../../images/rebock-small.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center center; } }
@@ -1485,6 +1485,13 @@ table {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center; }
+  @media screen and (max-width: 1000px) {
+    #two {
+      background: url("../../images/DSC01827-small.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center; } 
+ }
 
 /* Contact */
 #contact {

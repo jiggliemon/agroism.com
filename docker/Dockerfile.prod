@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:alpine
 
 # Create app directory
 WORKDIR /root/src
@@ -8,9 +8,6 @@ RUN npm install -g nodemon
 
 RUN echo 'alias ll="ls -n"' >> ~/.bashrc
 
-RUN apt-get -y update
-RUN apt-get install git
-
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -18,8 +15,7 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
-# If you are building your code for production
-# RUN npm install --only=production
-
 # Bundle app source
 EXPOSE 5050
+
+CMD ./bin/www

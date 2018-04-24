@@ -8,8 +8,8 @@ RUN npm install -g nodemon mocha
 
 RUN echo 'alias ll="ls -n"' >> ~/.bashrc
 
-RUN add-apt repository ppa:/certbot/certbot
-RUN apt-get install letsencrypt
+RUN apt-get -y update
+RUN apt-get install git
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied

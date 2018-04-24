@@ -1,13 +1,28 @@
 version: '3'
 
 services:
-  agroism-prod:
-    container_name: agroism
+  agroism-dev:
+    container_name: agroism-development
     environment:
       - PORT=5050
       - DEBUG=src*
     build: 
       context: .
+      dockerfile: ./docker/Dockerfile.dev
+    image: jiggliemon/agroism:develop
+    volumes:
+      - ./src:/root/src
+      - /root/src/node_modules
+    ports:
+      - "5050:5050"
+    command: ./bin/www
+
+  agroism-prod:
+    container_name: agroism-production
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile.prod
+    image: jiggliemon/agroism:production
     volumes:
       - ./src:/root/src
       - /root/src/node_modules

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  agroism-prod:
+    container_name: agroism
+    environment:
+      - PORT=5050
+      - DEBUG=src*
+    build: 
+      context: .
+    volumes:
+      - ./src:/root/src
+      - /root/src/node_modules
+    ports:
+      - "80:5050"
+    command: ./bin/www

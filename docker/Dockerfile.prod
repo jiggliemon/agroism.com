@@ -3,6 +3,8 @@ FROM node:alpine
 # Create app directory
 WORKDIR /root/src
 
+RUN apk add --update python
+
 # Install nodemon for hot reload
 RUN npm install -g nodemon
 
@@ -12,6 +14,7 @@ RUN echo 'alias ll="ls -n"' >> ~/.bashrc
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
+COPY src . 
 
 RUN npm install --only=production
 

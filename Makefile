@@ -27,12 +27,19 @@ push: ## Push the image to repository
 	@docker push $(registry)/$(image_name):$(version)
 
 rmi: ## Remove the image
-	@docker rmi $(image_name)
+	@docker rmi -f $(image_name)
+	@docker rmi -f $(image)
 
 rm: ## Remove container
 	@docker rm $(name)
+	@docker rm $(image_image)
+
+stop: ## Remove container
+	@docker stop $(name)
 
 clean: ## Remove container and its image
-	rm rmi
+	@docker stop $(name)
+	@docker rm $(name)
+	@docker rmi $(image_name) -f
 
-.PHONY: build run bash rmi rm clean push 
+.PHONY: build run bash rmi rm clean push stop

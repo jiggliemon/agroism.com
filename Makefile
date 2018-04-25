@@ -7,6 +7,8 @@ version			:= "1.0"
 image_name      := "opc-docker-local/$(name)"
 registry        := "opc-docker-local.docker.oraclecorp.com"
 
+# To pass as arg use "make env=prod build" and then $env is variable
+#env=$env
 env=prod
 
 help: ## Show this help
@@ -28,11 +30,10 @@ push: ## Push the image to repository
 
 rmi: ## Remove the image
 	@docker rmi -f $(image_name)
-	@docker rmi -f $(image)
+	@docker rmi $(registry)/$(image_name):$(version) -f
 
 rm: ## Remove container
 	@docker rm $(name)
-	@docker rm $(image_image)
 
 stop: ## Remove container
 	@docker stop $(name)
@@ -41,5 +42,6 @@ clean: ## Remove container and its image
 	@docker stop $(name)
 	@docker rm $(name)
 	@docker rmi $(image_name) -f
+	@docker rmi $(image_name) $(registry)/$(image_name):$(version) -f
 
 .PHONY: build run bash rmi rm clean push stop

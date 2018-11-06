@@ -4,7 +4,7 @@ ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 name            := "agroism"
 version			:= "1.0"
-image_name      := "opc-docker-local/$(name)"
+image_name      := "jiggliemon/$(name)"
 registry        := "opc-docker-local.docker.oraclecorp.com"
 
 # To pass as arg use "make env=prod build" and then $env is variable

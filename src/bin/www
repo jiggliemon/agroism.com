@@ -54,7 +54,7 @@ if (app.get('env') == 'development') {
     version: 'draft-11'
 
     // You MUST change 'acme-staging-v02' to 'acme-v02' in production
-  , server: 'https://acme-staging-v02.api.letsencrypt.org/directory'  // staging
+  , server: 'https://acme-v02.api.letsencrypt.org/directory'  // staging
 
     // You MUST change this to a valid email address
   , email: 'chase@agroism.com'

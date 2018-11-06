@@ -1468,13 +1468,13 @@ table {
 
 /* One */
 #one {
-  background: url("../../images/rebock.jpg");
+  background: url("../../images/DSC04570.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center; }
   @media screen and (max-width: 1000px) {
     #one {
-      background: url("../../images/rebock-small.jpg");
+      background: url("../../images/DSC04570-small.jpg");
       background-size: cover;
       background-attachment: fixed;
       background-position: center center; } }

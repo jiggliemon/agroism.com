@@ -2,6 +2,7 @@ version: '3'
 
 services:
   agroism-dev:
+    image: jiggliemon/agroism:develop
     container_name: agroism-development
     environment:
       - PORT=5050
@@ -9,7 +10,6 @@ services:
     build: 
       context: .
       dockerfile: ./docker/Dockerfile.dev
-    image: jiggliemon/agroism:develop
     volumes:
       - ./src:/root/src
       - /root/src/node_modules

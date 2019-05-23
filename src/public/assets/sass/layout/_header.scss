@@ -7,10 +7,6 @@
 /* Header */
 
 	#header {
-		position: fixed;
-		z-index: 10000;
-		left: 0;
-		top: 1em;
 		width: 100%;
 		background: transparentize(_palette(bg), 0.05);
 		height: 2.7em;
@@ -30,7 +26,7 @@
 			}
 
 			img {
-				max-height: 190%;
+				max-height: 90%;
 				display: inline-block;
 			}
 		}

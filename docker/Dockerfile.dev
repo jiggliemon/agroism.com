@@ -4,7 +4,7 @@ FROM node:carbon
 WORKDIR /root/src
 
 # Install nodemon for hot reload
-RUN npm install -g nodemon mocha node-sass
+RUN npm install -g nodemon mocha
 
 RUN echo 'alias ll="ls -n"' >> ~/.bashrc
 

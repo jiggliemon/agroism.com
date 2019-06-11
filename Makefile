@@ -3,7 +3,7 @@ SHELL := /bin/bash
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 name            := "agroism"
-version			:= "1.0"
+version			:= "latest"
 image_name      := "jiggliemon/$(name)"
 registry        := "opc-docker-local.docker.oraclecorp.com"
 
@@ -26,7 +26,7 @@ tag: ## Tag the image with proper version
 	@docker tag $(image_name) $(registry)/$(image_name):$(version)
         
 push: ## Push the image to repository
-	@docker push $(registry)/$(image_name):$(version)
+	@docker push $(image_name):$(version)
 
 rmi: ## Remove the image
 	@docker rmi -f $(image_name)

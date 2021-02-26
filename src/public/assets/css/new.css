@@ -67,11 +67,20 @@
   height: 32rem;
   background-color: #777; }
 
-.carousel-item > img {
+.carousel-item > img,
+.carousel-item > picture {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%; }
+
+main.container {
+  margin-top: 50px; }
+
+.product-container {
+  border: 1px #efefef solid;
+  padding: 10px;
+  border-radius: 2px; }
 
 /* MARKETING CONTENT
   -------------------------------------------------- */

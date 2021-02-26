@@ -4,9 +4,14 @@ services:
   agroism-dev:
     image: jiggliemon/agroism:develop
     container_name: agroism-development
+    depends_on: 
+      - rethinkdb
     environment:
       - PORT=5050
       - DEBUG=src*
+      - DB_HOST=rethinkdb
+      - DB_PORT=28015
+      - DB_DB=agro-studio
     build: 
       context: .
       dockerfile: ./docker/Dockerfile.dev
@@ -16,3 +21,10 @@ services:
     ports:
       - "5050:5050"
     command: ./bin/www
+
+  rethinkdb:
+    image: rethinkdb
+    ports:
+      - 8080:8080
+    command: rethinkdb --bind all
+

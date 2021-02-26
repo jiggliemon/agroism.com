@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/www",
-    "build-css": "node-sass --include-path scss src/public/assets/sass/new.scss  src/public/assets/css/new.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "./node_modules/.bin/node-sass --include-path scss src/public/assets/sass/new.scss  src/public/assets/css/new.css",
+    "watch-css": "./node_modules/.bin/nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,19 @@
   },
   "homepage": "https://github.com/jiggliemon/agroism.com#readme",
   "dependencies": {
-    "express": "^4.16.3",
+    "add-dependencies": "^1.1.0",
+    "config": "^3.3.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "express": "^4.16.3",
     "greenlock-express": "^2.1.1",
     "http-errors": "~1.6.2",
+    "js-data": "^3.0.9",
+    "js-data-rethinkdb": "^3.0.0",
+    "morgan": "~1.9.0",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
     "pug": "~2.0.0",
-    "morgan": "~1.9.0"
+    "rethinkdbdash": "^2.3.31"
   }
 }

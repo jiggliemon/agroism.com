@@ -1,5 +1,161 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='p:domain_verify' content='d3c15cb48250e8ac0a646455842a696e')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://unpkg.com/flexmasonry/dist/flexmasonry.css')
+  script#mcjs.
+    !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7a542ed38d44a73ac7ddff97b/13fcf890685476c37ef4b5ad8.js");
+  link(rel='stylesheet' href='assets/css/new.css')
+  title Agro Studio - Chase Wilson Photography, Advertising and Portrait Photography
+body
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top
+    // <div class="container">
+    a.navbar-brand(href='/' title='Chase Wilson Photography at Agro Studio')
+      img(src='/assets/img/logo-transparent_100.png' height='20px' width='20px')
+      | &nbsp;&nbsp;Agro Studio
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link(href='#')
+            | Home
+            span.sr-only (current)
+        //
+          <li class="nav-item">
+          <a class="nav-link" href="/events.html">Events</a>
+          </li>
+        //
+          <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+          </li>
+        li.nav-item.active
+          a.nav-link(href='/contact.html') Contact
+    // </div>
+  header
+    #hero-carousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#hero-carousel' data-slide-to='0')
+        li(data-target='#hero-carousel' data-slide-to='1')
+        li(data-target='#hero-carousel' data-slide-to='2')
+        li(data-target='#hero-carousel' data-slide-to='3')
+        li(data-target='#hero-carousel' data-slide-to='4')
+        li(data-target='#hero-carousel' data-slide-to='5')
+        li(data-target='#hero-carousel' data-slide-to='6')
+        li(data-target='#hero-carousel' data-slide-to='7')
+        li(data-target='#hero-carousel' data-slide-to='8')
+        li(data-target='#hero-carousel' data-slide-to='9')
+        li(data-target='#hero-carousel' data-slide-to='10')
+        li(data-target='#hero-carousel' data-slide-to='11')
+      .carousel-inner(role='listbox')
+        .carousel-item.active
+          picture
+            source(media='(orientation: landscape)' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/El-Varado_2160_web.jpg 2160w' sizes='100vw')
+            img(src='https://agro-photos.s3-us-west-1.amazonaws.com/El-Varado_16x9.jpg' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/El-Varado_16x9.jpg 620w' sizes='100vw' alt='El Varado, 2020 Chase Wilson Photography')
+        .carousel-item
+          picture
+            source(media='(orientation: landscape)' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/Once-Upon-a-Time-in-Salton-Sea_2160_web.jpg 2160w' sizes='100vw')
+            img(src='https://agro-photos.s3-us-west-1.amazonaws.com/Once-Upon-a-Time-in-Salton-Sea_16x9.jpg' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/Once-Upon-a-Time-in-Salton-Sea_16x9.jpg 620w' sizes='100vw' alt='Once Upon a Time in Salton Sea, 2020 Chase Wilson Photography')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/Fools-Gold1122_2160_web.jpg' alt='Baptisim by Immersion, 2020 Chase Wilson Photography')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/American-Muscle_2160_compressed.jpg')
+        .carousel-item
+          picture
+            source(media='(orientation: landscape)' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/The-Unfortunate_2160_web.jpg 2160w' sizes='100vw')
+            img(src='https://agro-photos.s3-us-west-1.amazonaws.com/The-Unfortunate_16x9.jpg' srcset='https://agro-photos.s3-us-west-1.amazonaws.com/The-Unfortunate_16x9.jpg 620w' sizes='100vw' alt='The Unfortunate, 2019 Chase Wilson Photography')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/Small-Town-Justice_2160.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/Wheat-Fields4553-2160px.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/_DSC7756.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC01382.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/The-Letter_2160.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC04594.jpg')
+        .carousel-item
+          img(src='https://agro-photos.s3-us-west-1.amazonaws.com/Katie-Maybe0050-Edit-web.jpg')
+      a.carousel-control-prev(href='#hero-carousel' role='button' data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#hero-carousel' role='button' data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next
+  section#newsletter
+    h3 Subscribe to the newsletter
+    form#newsletter-form(action='' method='POST')
+      .input-group.input-group-sm.mb-3
+        .input-group-prepend
+          span.input-group-text Email
+        input.form-control(type='text' aria-label='Small' aria-describedby='inputGroup-sizing-sm' name='email')
+        small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+      .form-group
+        .form-check
+          input#invalidCheck.form-check-input(type='checkbox' value='' required='')
+          label.form-check-label(for='invalidCheck')
+            | Agree to terms and conditions
+          .invalid-feedback
+            | You must agree before submitting.
+  main#lots-of-photos
+    .grid
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC04806-thumb.jpg' alt='Lorraine Fariante shot by Chase Wilson for the `Past Era` set')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/_DSC8957.jpg' alt='Ashley Rae for Robert McGinnis Studies - Shot by Chase Wilson 2019')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/Cody-Rife0085.jpg' alt='Cody Rife The Art of Suffering album cover by Chase Wilson 2018')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/Robert-McGinnis1411-2.jpg' alt='Robert McGinnis Homage - Shot by Chase Wilson 2019')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/Mary-Tomlinson-Lake-Los-Angeles_Photograpy-Chase-Wilson-2016.jpg' alt='Mary Tomlinson photographed in Lake Los Angeles - Shot by Chase Wilson 2016')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/Chris-Kettner-for-Out-of-School-Photos_Photography-by-Chase-Wilson-2017.jpg' alt='Christopher Kettner for Out of School Portraits - Shot by Chase Wilson 2017')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC07841_web.jpg')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC00415_web.jpg')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC4439-thumb.jpg' alt='Lisa Elizabeth shot by Chase Wilson for the `Dutch Studies` set')
+      //
+        <div class="grid-item">
+        <img src="https://agro-photos.s3-us-west-1.amazonaws.com/DSC00119-thumb.jpg"  class="two-x"  alt="DFNDR Body Armor Hero Shot by Chase Wilson 2018" />
+        </div>
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/_DSC8231.jpg' alt='Chris Kettner Character Portrait for Stranded by Chase Wilson 2018')
+      .grid-item
+        img.two-x(src='https://agro-photos.s3-us-west-1.amazonaws.com/DSC06806-thumb.jpg' alt='Tom Tucker shot by Chase Wilson 2018 for the `Past Era` set')
+  #top-of-site-pixel-anchor
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+script(src='https://unpkg.com/flexmasonry/dist/flexmasonry.js')
+script.
+  if ( "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+  let observer = new IntersectionObserver(entries => {
+  if (entries[0].boundingClientRect.y < 0) {
+  document.body.classList.remove("header-at-top");
+  } else {
+  document.body.classList.add("header-at-top");
+  }
+  });
+  observer.observe(document.querySelector("#top-of-site-pixel-anchor"));
+  }
+  FlexMasonry.init('.grid',{
+  responsive: true,
+  numCols: 4
+  });
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-30050759-1', 'auto');
+  ga('send', 'pageview')

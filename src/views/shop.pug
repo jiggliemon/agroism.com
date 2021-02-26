@@ -1,0 +1,14 @@
+extends layout.pug
+block content
+  main.container
+    h1=header
+    .row
+      each val in products
+        if val.images && val.images.length > 0
+          .col
+            .product-container
+              - let image = val.images[0]
+              .image-container
+                img.img-fluid(src=image)
+              h3=val.title
+              p=val.price
